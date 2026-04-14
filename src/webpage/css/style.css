@@ -25,3 +25,30 @@ nav a:hover {
 nav a.active {
     color: black;
 }
+header {
+    padding: calc(50px + 1rem + 2px);
+}
+h1{
+    margin-top: 100px;
+    font-size: 3.75rem;
+    font-weight: bold;
+    line-height: 1.2em;
+
+}
+h1 + p {
+    width: 800px;
+    margin: 35px auto;
+}
+#cta-button {
+    text-decoration: none;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #D786FF, #722CFF);
+    display: inline-block;
+    padding: 1em 3em;
+    font-weight: 600;
+    border-radius: 1000px;
+    transition: 150ms ease;
+}
+#cta-button:hover {
+    scale: 1.1;
+}
