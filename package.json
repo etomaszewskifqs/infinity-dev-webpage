@@ -1,0 +1,31 @@
+{
+  "name": "infinity-dev-webpage",
+  "version": "1.0.0",
+  "description": "webpage for projects oninfinity-dev.net",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "test",
+    "clear-dist": "rmdir /s /q dist 2>nul & mkdir dist",
+    "build-dist": "if exist dist (rmdir /s /q dist) && xcopy src\\webpage dist\\ /E /I /Y",
+    "deploy": ".\\deploy.bat"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etomaszewskifqs/infinity-dev-webpage.git"
+  },
+  "keywords": [
+    "phaistos",
+    "disc",
+    "symbols",
+    "kanji"
+  ],
+  "author": "me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/etomaszewskifqs/infinity-dev-webpage/issues"
+  },
+  "homepage": "https://github.com/etomaszewskifqs/infinity-dev-webpage#readme"
+}

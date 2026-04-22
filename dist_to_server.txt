@@ -1,0 +1,4 @@
+open ftp://gege@gege.unixstorm.org
+rmdir /domains/infinity-dev.net/public_html/
+put \dist\* /domains/infinity-dev.net/public_html/
+exit
