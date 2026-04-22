@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "test",
-    "clear-dist": "rmdir /s /q dist 2>nul & mkdir dist",
+    "clean-dist": "rmdir /s /q dist 2>nul & mkdir dist",
     "build-dist": "if exist dist (rmdir /s /q dist) && xcopy src\\webpage dist\\ /E /I /Y",
     "deploy": ".\\deploy.bat"
   },

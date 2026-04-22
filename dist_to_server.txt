@@ -1,4 +1,10 @@
 open ftp://gege@gege.unixstorm.org
-rmdir /domains/infinity-dev.net/public_html/
-put \dist\* /domains/infinity-dev.net/public_html/
+option batch continue
+rm /domains/infinity-dev.net/public_html/index.html
+rm /domains/infinity-dev.net/public_html/about.html
+rm /domains/infinity-dev.net/public_html/projects.html
+rm /domains/infinity-dev.net/public_html/login.html
+rmdir /domains/infinity-dev.net/public_html/css
+rmdir /domains/infinity-dev.net/public_html/js
+put dist\* /domains/infinity-dev.net/public_html/
 exit
