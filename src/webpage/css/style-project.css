@@ -1,24 +1,42 @@
+#loading-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    place-items: center;
+}
 
-.project-card:nth-child(2){
-    animation-duration: 3s;
-    animation-name: spin;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+#loading-overlay.active {
+    display: grid;
+}
+
+.rotating-square {
+    --square-color: aqua;
+    width: 50px;
+    height: 50px;
+    border: 6px solid var(--square-color);
+    border-radius: 4px;
+    box-shadow: 0 0 8px var(--square-color), 0 0 8px var(--square-color) inset;
+    position: absolute;
+    translate: -50% -50%;
+    z-index: 10;
+    animation: 1.5s spin-square ease-in-out infinite;
 }
 
 
-@keyframes spin {
-    0% {
-    }
-    50% {
-        scale: 1.2;
-        transform: rotate(0);
-        border-radius: 20px;
-    }
-    100% {
-        transform: rotate(360deg);
-        border-radius: 50%;
-        scale: 1.2;
-    }
+@keyframes spin-square {
+    0%{
+        transform: rotateX(0) rotateY(0) rotateZ(0);
 
+    }
+    33%{
+        transform: rotateX(180deg) rotateY(0) rotateZ(0);
+    }
+    67%{
+        transform: rotateX(180deg) rotateY(180deg) rotateZ(0);
+    }
+    100%{
+        transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+    }
 }
